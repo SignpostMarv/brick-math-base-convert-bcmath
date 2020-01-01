@@ -2,9 +2,9 @@
 
 A fork of [brick/math](https://github.com/brick/math), extracting & refactoring the base conversion portion.
 
-[![Build Status](https://api.travis-ci.org/signpostmarv/brick-math-base-convert-gmp.svg?branch=master)](http://travis-ci.org/signpostmarv/brick-math-base-convert-gmp)
-[![Coverage Status](https://coveralls.io/repos/signpostmarv/brick-math-base-convert-gmp/badge.svg?branch=master)](https://coveralls.io/r/signpostmarv/brick-math-base-convert-gmp?branch=master)
-[![Total Downloads](https://poser.pugx.org/signpostmarv/brick-math-base-convert-gmp/downloads)](https://packagist.org/packages/signpostmarv/brick-math-base-convert-gmp)
+[![Build Status](https://api.travis-ci.org/signpostmarv/brick-math-base-convert-bcmath.svg?branch=master)](http://travis-ci.org/signpostmarv/brick-math-base-convert-bcmath)
+[![Coverage Status](https://coveralls.io/repos/github/SignpostMarv/brick-math-base-convert/badge.svg?branch=master)](https://coveralls.io/github/SignpostMarv/brick-math-base-convert-bcmath?branch=master)
+[![Total Downloads](https://poser.pugx.org/signpostmarv/brick-math-base-convert-bcmath/downloads)](https://packagist.org/packages/signpostmarv/brick-math-base-convert-bcmath)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 ### Installation
@@ -12,12 +12,12 @@ A fork of [brick/math](https://github.com/brick/math), extracting & refactoring 
 This library is installable via [Composer](https://getcomposer.org/):
 
 ```bash
-composer require signpostmarv/brick-math-base-convert-gmp
+composer require signpostmarv/brick-math-base-convert-bcmath
 ```
 
 ### Requirements
 
-This library requires PHP 7.4 or later, and for the gmp extension to be installed.
+This library requires PHP 7.4 or later, and for the bcmath extension to be installed.
 
 For other options, see:
 * [native](https://github.com/signpostmarv/brick-math-base-convert)
