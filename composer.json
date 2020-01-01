@@ -1,11 +1,12 @@
 {
-    "name": "signpostmarv/brick-math-base-convert",
+    "name": "signpostmarv/brick-math-base-convert-bcmath",
     "description": "Arbitrary Base Conversion Library",
     "type": "library",
     "keywords": [
         "Brick",
         "Math",
-        "Arbitrary Base Conversion"
+        "Arbitrary Base Conversion",
+        "BCMath"
     ],
     "license": "MIT",
 	"config": {
@@ -13,10 +14,11 @@
 		"sort-packages": true
 	},
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "ext-bcmath": "*",
+        "signpostmarv/brick-math-base-convert": "dev-master"
     },
     "require-dev": {
-        "ext-bcmath": "*",
         "maglnet/composer-require-checker": "^2.0",
         "php-coveralls/php-coveralls": "^2.2",
         "phpunit/phpunit": "^8.5",
@@ -28,6 +30,12 @@
         "symfony/console": "^4.4",
         "vimeo/psalm": "^3.8"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/SignpostMarv/brick-math-base-convert.git"
+        }
+    ],
 	"conflict": {
 		"vimeo/psalm": "<3.8"
     },
@@ -37,7 +45,8 @@
             "phpcpd src tests",
             "phpmnd ./ --exclude=build --exclude=./vendor/ --non-zero-exit-on-violation --hint",
 			"php-cs-fixer fix --verbose --dry-run --diff-format=udiff",
-            "composer-require-checker check ./composer.json"
+            "composer-require-checker check ./composer.json",
+            "phpunit -vvvv"
         ]
     },
     "autoload": {
@@ -47,7 +56,10 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SignpostMarv\\Brick\\Math\\Tests\\": "tests/"
+            "SignpostMarv\\Brick\\Math\\Tests\\": [
+                "./tests/",
+                "./vendor/signpostmarv/brick-math-base-convert/tests/"
+            ]
         }
     }
 }

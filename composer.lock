@@ -4,8 +4,76 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2275c6be2af58fb1e836671f4d96e9b",
-    "packages": [],
+    "content-hash": "744a65a984702db65f2d1741b12171ba",
+    "packages": [
+        {
+            "name": "signpostmarv/brick-math-base-convert",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SignpostMarv/brick-math-base-convert.git",
+                "reference": "7c4cef8da601c34ad64351d438826609ec1b4ab2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SignpostMarv/brick-math-base-convert/zipball/7c4cef8da601c34ad64351d438826609ec1b4ab2",
+                "reference": "7c4cef8da601c34ad64351d438826609ec1b4ab2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4"
+            },
+            "conflict": {
+                "vimeo/psalm": "<3.8"
+            },
+            "require-dev": {
+                "maglnet/composer-require-checker": "^2.0",
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^8.5",
+                "povils/phpmnd": "^2.1",
+                "psalm/plugin-phpunit": "dev-master",
+                "roave/security-advisories": "dev-master",
+                "sebastian/phpcpd": "^4.1",
+                "signpostmarv/php-cs-fixer-config": "^0.14.0",
+                "symfony/console": "^4.4",
+                "vimeo/psalm": "^3.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SignpostMarv\\Brick\\Math\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SignpostMarv\\Brick\\Math\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "tests": [
+                    "psalm --show-info=false",
+                    "phpcpd src tests",
+                    "phpmnd ./ --exclude=build --exclude=./vendor/ --non-zero-exit-on-violation --hint",
+                    "php-cs-fixer fix --verbose --dry-run --diff-format=udiff",
+                    "composer-require-checker check ./composer.json",
+                    "phpunit -vvvv"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Arbitrary Base Conversion Library",
+            "keywords": [
+                "Arbitrary Base Conversion",
+                "Brick",
+                "Math"
+            ],
+            "support": {
+                "source": "https://github.com/SignpostMarv/brick-math-base-convert/tree/master"
+            },
+            "time": "2020-01-01T11:59:06+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "amphp/amp",
@@ -4542,15 +4610,15 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "signpostmarv/brick-math-base-convert": 20,
         "psalm/plugin-phpunit": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
-    },
-    "platform-dev": {
+        "php": "^7.4",
         "ext-bcmath": "*"
-    }
+    },
+    "platform-dev": []
 }
