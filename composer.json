@@ -16,7 +16,7 @@
     "require": {
         "php": "^7.4",
         "ext-bcmath": "*",
-        "signpostmarv/brick-math-base-convert": "dev-master"
+        "signpostmarv/brick-math-base-convert": "^0.1.1"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^2.0",
@@ -30,12 +30,6 @@
         "symfony/console": "^4.4",
         "vimeo/psalm": "^3.8"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/SignpostMarv/brick-math-base-convert.git"
-        }
-    ],
 	"conflict": {
 		"vimeo/psalm": "<3.8"
     },
