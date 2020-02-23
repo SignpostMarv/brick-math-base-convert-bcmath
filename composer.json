@@ -23,15 +23,15 @@
         "php-coveralls/php-coveralls": "^2.2",
         "phpunit/phpunit": "^8.5",
         "povils/phpmnd": "^2.1",
-        "psalm/plugin-phpunit": "dev-master",
+        "psalm/plugin-phpunit": "^0.9.0",
         "roave/security-advisories": "dev-master",
         "sebastian/phpcpd": "^4.1",
         "signpostmarv/php-cs-fixer-config": "^0.14.0",
         "symfony/console": "^4.4",
-        "vimeo/psalm": "^3.8"
+        "vimeo/psalm": "^3.9"
     },
 	"conflict": {
-		"vimeo/psalm": "<3.8"
+		"vimeo/psalm": "<3.9.3"
     },
     "scripts": {
         "tests": [
