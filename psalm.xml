@@ -1,23 +1,26 @@
 <?xml version="1.0"?>
 <psalm
-    totallyTyped="true"
+	totallyTyped="true"
 	findUnusedCode="true"
-    resolveFromConfigFile="true"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="https://getpsalm.org/schema/config"
-    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
-    errorBaseline="./psalm.baseline.xml"
+	resolveFromConfigFile="true"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://getpsalm.org/schema/config"
+	xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+	errorBaseline="./psalm.baseline.xml"
  	cacheDirectory="./psalm/cache/"
 >
-    <projectFiles>
-        <file name=".php_cs.dist" />
-        <directory name="src"/>
-        <directory name="tests"/>
-        <ignoreFiles>
-            <directory name="vendor"/>
-        </ignoreFiles>
-    </projectFiles>
+	<projectFiles>
+		<file name=".php_cs.dist" />
+		<directory name="src"/>
+		<directory name="tests"/>
+		<ignoreFiles>
+			<directory name="vendor"/>
+		</ignoreFiles>
+	</projectFiles>
 
-    <issueHandlers>
-    </issueHandlers>
-<plugins><pluginClass class="Psalm\PhpUnitPlugin\Plugin"/></plugins></psalm>
+	<issueHandlers>
+	</issueHandlers>
+	<plugins>
+		<pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>
+	</plugins>
+</psalm>
