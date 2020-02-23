@@ -4,39 +4,39 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2483c77f9d3e5758e6cdc4b9a747013c",
+    "content-hash": "0166671ba15502e7e19824a2460e0008",
     "packages": [
         {
             "name": "signpostmarv/brick-math-base-convert",
-            "version": "v0.1.1",
+            "version": "v0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/brick-math-base-convert.git",
-                "reference": "7bfe0a8dc317db557b47d32c9a6b3783fc0b983a"
+                "reference": "7295421e9f2cfdb1ca8a43fb117e79674a3a55ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/brick-math-base-convert/zipball/7bfe0a8dc317db557b47d32c9a6b3783fc0b983a",
-                "reference": "7bfe0a8dc317db557b47d32c9a6b3783fc0b983a",
+                "url": "https://api.github.com/repos/SignpostMarv/brick-math-base-convert/zipball/7295421e9f2cfdb1ca8a43fb117e79674a3a55ad",
+                "reference": "7295421e9f2cfdb1ca8a43fb117e79674a3a55ad",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4"
             },
             "conflict": {
-                "vimeo/psalm": "<3.8"
+                "vimeo/psalm": "<3.9.3"
             },
             "require-dev": {
+                "infection/infection": "^0.15.3",
                 "maglnet/composer-require-checker": "^2.0",
                 "php-coveralls/php-coveralls": "^2.2",
                 "phpunit/phpunit": "^8.5",
-                "povils/phpmnd": "^2.1",
-                "psalm/plugin-phpunit": "dev-master",
+                "povils/phpmnd": "^2.2",
+                "psalm/plugin-phpunit": "^0.9.0",
                 "roave/security-advisories": "dev-master",
                 "sebastian/phpcpd": "^4.1",
-                "signpostmarv/php-cs-fixer-config": "^0.14.0",
-                "symfony/console": "^4.4",
-                "vimeo/psalm": "^3.8"
+                "signpostmarv/php-cs-fixer-config": "^0.17.1",
+                "vimeo/psalm": "^3.9"
             },
             "type": "library",
             "autoload": {
@@ -54,7 +54,7 @@
                 "brick",
                 "math"
             ],
-            "time": "2020-01-01T16:43:23+00:00"
+            "time": "2020-02-23T16:55:09+00:00"
         }
     ],
     "packages-dev": [

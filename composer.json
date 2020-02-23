@@ -16,7 +16,7 @@
     "require": {
         "php": "^7.4",
         "ext-bcmath": "*",
-        "signpostmarv/brick-math-base-convert": "^0.1.1"
+        "signpostmarv/brick-math-base-convert": "^0.1.2"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^2.0",
