@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace SignpostMarv\Brick\Math\Calculator;
 
+use function bcadd;
+use function bcdiv;
+use function bcmod;
+use function bcmul;
 use function preg_match;
 use SignpostMarv\Brick\Math\Calculator;
 use function strlen;
@@ -23,7 +27,7 @@ class BcMathCalculator extends Calculator
 	 */
 	public function add(string $a, string $b) : string
 	{
-		return \bcadd($a, $b, 0);
+		return bcadd($a, $b, 0);
 	}
 
 	/**
@@ -31,7 +35,7 @@ class BcMathCalculator extends Calculator
 	 */
 	public function mul(string $a, string $b) : string
 	{
-		return \bcmul($a, $b, 0);
+		return bcmul($a, $b, 0);
 	}
 
 	/**
@@ -55,8 +59,8 @@ class BcMathCalculator extends Calculator
 			$scale = (int) max($scale, strlen($matches[1]));
 		}
 
-		$q = (string) \bcdiv($a, $b, 0);
-		$r = trim((string) \bcmod($a, $b, $scale + 1), '0');
+		$q = (string) bcdiv($a, $b, 0);
+		$r = trim((string) bcmod($a, $b, $scale + 1), '0');
 
 		if (0 === strpos($r, '-0.')) {
 			$r = '-' . substr($r, 2);
