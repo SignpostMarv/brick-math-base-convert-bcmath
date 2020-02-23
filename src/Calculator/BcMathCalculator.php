@@ -22,12 +22,22 @@ use function trim;
  */
 class BcMathCalculator extends Calculator
 {
+	const SCALE_INT = 0;
+
+	const DEFAULT_SCALE = 0;
+
+	const PREG_MATCH = 1;
+
+	const NUDGE_SCALE = 1;
+
+	const FIRST_MATCH = 1;
+
 	/**
 	 * {@inheritdoc}
 	 */
 	public function add(string $a, string $b) : string
 	{
-		return bcadd($a, $b, 0);
+		return bcadd($a, $b, self::SCALE_INT);
 	}
 
 	/**
@@ -35,7 +45,7 @@ class BcMathCalculator extends Calculator
 	 */
 	public function mul(string $a, string $b) : string
 	{
-		return bcmul($a, $b, 0);
+		return bcmul($a, $b, self::SCALE_INT);
 	}
 
 	/**
@@ -49,18 +59,21 @@ class BcMathCalculator extends Calculator
 			return $maybe;
 		}
 
-		$scale = 0;
+		$scale = self::DEFAULT_SCALE;
 
-		if (1 === preg_match('/\.(\d+)$/', $a, $matches)) {
-			$scale = strlen($matches[1]);
+		if (self::PREG_MATCH === preg_match('/\.(\d+)$/', $a, $matches)) {
+			$scale = strlen($matches[self::FIRST_MATCH]);
 		}
 
-		if (1 === preg_match('/\.(\d+)$/', $b, $matches)) {
-			$scale = (int) max($scale, strlen($matches[1]));
+		if (self::PREG_MATCH === preg_match('/\.(\d+)$/', $b, $matches)) {
+			$scale = (int) max($scale, strlen($matches[self::FIRST_MATCH]));
 		}
 
-		$q = (string) bcdiv($a, $b, 0);
-		$r = trim((string) bcmod($a, $b, $scale + 1), '0');
+		/** @var string */
+		$q = bcdiv($a, $b, self::SCALE_INT);
+		/** @var string */
+		$r = bcmod($a, $b, $scale + self::NUDGE_SCALE);
+		$r = trim($r, '0');
 
 		if (0 === strpos($r, '-0.')) {
 			$r = '-' . substr($r, 2);

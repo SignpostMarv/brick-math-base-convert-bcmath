@@ -2,3 +2,6 @@
 /.idea
 /.phpunit.result.cache
 /.php_cs.cache
+/coverage/
+/psalm/cache/
+/infection.log

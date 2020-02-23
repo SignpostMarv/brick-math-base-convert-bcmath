@@ -1,0 +1,24 @@
+{
+    "timeout": 10,
+    "source": {
+        "directories": [
+            "./src/"
+        ]
+    },
+    "logs": {
+        "text": "infection.log"
+    },
+    "mutators": {
+        "@default": true,
+        "CastInt": {
+            "ignore": [
+                "SignpostMarv\\Brick\\Math\\Calculator\\BcMathCalculator::divQR"
+            ]
+        },
+        "PregMatchMatches": {
+            "ignore": [
+                "SignpostMarv\\Brick\\Math\\Calculator\\BcMathCalculator::divQR"
+            ]
+        }
+    }
+}
